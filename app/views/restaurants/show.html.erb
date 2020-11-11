@@ -9,8 +9,10 @@
   <hr>
   <ul>
     <% @restaurant.reviews.each do |review| %>
-    <li><%= review.content %></li> <h4><%= review.rating %></h4>
+    <li><%= review.content %></li> <h4><%= review.rating %> / 5</h4>
     <% end %>
   </ul>
-    <%=  %>
+    <%= link_to 'back to restaurants', restaurants_path %>
+    <%= render 'reviews/form', restaurant: @restaurant %>
+
 </div>
